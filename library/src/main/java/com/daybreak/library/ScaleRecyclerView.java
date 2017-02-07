@@ -162,7 +162,6 @@ public class ScaleRecyclerView extends RecyclerView implements View.OnTouchListe
 
         @Override
         public void onScaleEnd(ScaleGestureDetector detector) {
-//            Log.i(TAG, "onScaleEnd: ");
             if (getScaleX() < ORIGINAL_RATE) {
                 zoom(currentScale, ORIGINAL_RATE, getX(), 0, getY(), 0);
             }
@@ -221,9 +220,6 @@ public class ScaleRecyclerView extends RecyclerView implements View.OnTouchListe
         RecyclerView.LayoutManager layoutManager = getLayoutManager();
         int visibleItemCount = layoutManager.getChildCount();
         int totalItemCount = layoutManager.getItemCount();
-//        Log.i("onScrollStateChanged", "visibleItemCount" + visibleItemCount);
-//        Log.i("onScrollStateChanged", "lastVisibleItemPosition" + lastVisibleItemPosition);
-//        Log.i("onScrollStateChanged", "totalItemCount" + totalItemCount);
         if (visibleItemCount > 0 && lastVisibleItemPosition == totalItemCount - 1) {
             atLastPosition = true;
         } else {
